@@ -1,0 +1,39 @@
+---
+# install docker packages
+
+
+
+# add docker gpg key
+
+# add repo for Docker
+
+# update_cache
+
+# install Docker
+- name: Install Docker
+  apt:
+    name: docker-ce
+    state: present
+    update_cache: yes
+  notify: Start Docker on boot
+
+# add user to docker group
+
+# install Docker-compose
+- name: Install Docker-compose
+  apt:
+    name: docker-compose
+    state: present
+    update_cache: yes
+
+# install pyyaml
+#- name: Install PyYML
+#  apt:
+#    name: python-yaml
+#    state: present
+#    update_cache: yes
+
+# install Community.docker collection ERRORS
+#- name: Install Community.docker
+#  ansible.builtin.command: 
+#    cmd: ansible-galaxy collection install community.docker

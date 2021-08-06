@@ -1,0 +1,7 @@
+# copy cfg nginx to server
+---
+- name: copy CFG Nginx to igor`s server
+  copy:
+    src: /do/default.conf
+    dest: /dru/default.conf
+

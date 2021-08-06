@@ -1,0 +1,9 @@
+# COPY DOC-COM file to server and run it
+---
+- name: copy Docker-compose file
+  copy:
+    src: /do/roles/setup/tasks/doc-com.yml
+    dest: /dru/doc-com.yml 
+
+- name: run Docker-compose file
+  command: "docker-compose -f /dru/doc-com.yml up -d"

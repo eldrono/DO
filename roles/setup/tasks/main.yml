@@ -1,0 +1,20 @@
+# Include TASKS
+---
+
+
+#include docker tasks
+- name: Import docker tasks
+  include_tasks: docker.yml
+
+#include ngnix and swagger [NOT USED]
+#- name: Import nginx and swagger tasks
+#  include_tasks: nginx_and_swagger.yml
+
+#include copy cfg nginx to server
+- name: Import copy cfg nginx to server
+  include_tasks: copy_cfg_nginx.yml
+
+#include copy and run docker-compose.yml
+- name: Import copy and run docker-compose.yml
+  include_tasks: run-doc-com.yml
+

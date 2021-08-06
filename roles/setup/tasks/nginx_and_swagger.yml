@@ -1,0 +1,15 @@
+---
+
+# run containers Nginx and Swagger
+- name: Run container Nginx
+  docker_container:
+    name: Nginx1001
+    image: nginx:latest
+    ports:
+      - 1001:80
+- name: Run container Swagger
+  docker_container:
+    name: Swagger998
+    image: swaggerapi/swagger-editor:latest
+    ports:
+      - 998:8080

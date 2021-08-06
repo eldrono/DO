@@ -1,0 +1,8 @@
+---
+- name: Configuration Igor's server
+  hosts: igor_server
+#  remote_user: root
+#  become: yes
+  roles:
+    - setup
+ 
